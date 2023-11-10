@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Андреева Божена</h1>
+    <h2>P3231 ВАРИАНТ-1201</h2>
+    <script src="js/file.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <form id="myForm">
+        <table >
+            <tr> 
+                <td class="date" id="dateForm">
+                    
+                    <p>Введите данные: </p>
+                    <label for="options">X: </label> 
+                    <select id="inputX" name="inputX">
+                        <option value="-3">-3</option>
+                        <option value="-2">-2</option>
+                        <option value="-1">-1</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> <br>
+        
+                    <label for="options">Y:</label>
+                    <input type="text" id="inputY" placeholder="-3 to 3" min="-3" max="3" step="1" required oninput="this.setCustomValidity('');"><br>
+            
+                    <label for="options">R:</label>
+                    <input type="text" id="inputR" placeholder="2 to 5" min="2" max="5" step="0.5" required oninput="this.setCustomValidity('');"><br>
+
+                    <button id="submitButton" >Отправить</button>
+                </td>
+                <td class="picture">
+                    <img src="picture1.png" alt="График попадания точки в координатной плоскости">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <table id="table2" class="table2">
+        <thead>
+            <tr class="result" id="result">
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Результат</th>
+                <th>Текущее время</th>
+                <th>Время работы</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            
+        </tbody>
+        
+    </table>
+    <th>
+        <td>
+            <button id="clearTable">Очистить</button>
+            </td>
+    </th>
+</body>
+</html>
