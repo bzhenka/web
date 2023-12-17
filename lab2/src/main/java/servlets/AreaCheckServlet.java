@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import utils.AreaChecker;
 import utils.CoordinatesValidator;
 import utils.Errors;
+import java.math.BigDecimal;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,20 +26,20 @@ public class AreaCheckServlet extends HttpServlet {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String formattedDateTime = time.format(formatter);
 
-        double x, y, r;
+        BigDecimal x, y, r;
         try {
-            x = Double.parseDouble(request.getParameter("X"));
-            y = Double.parseDouble(request.getParameter("Y"));
-            r = Double.parseDouble(request.getParameter("R"));
+            x = new BigDecimal(request.getParameter("X"));
+            y = new BigDecimal(request.getParameter("Y"));
+            r = new BigDecimal(request.getParameter("R"));
             CoordinatesValidator validator = new CoordinatesValidator(x, y, r);
 
-            if (!validator.checkData()){
+            if (!validator.checkData()) {
                 System.out.println("Значение не правильное");
                 Errors.sendError(response, 422, "Значения не прошли проверку");
                 return;
             }
             ResultsList list = (ResultsList) request.getSession().getAttribute("results");
-            if (list == null){
+            if (list == null) {
                 list = new ResultsList();
                 getServletContext().setAttribute("results", list);
             }
@@ -51,8 +52,10 @@ public class AreaCheckServlet extends HttpServlet {
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(new Gson().toJson(result));
+        } catch (NumberFormatException e) {
+            Errors.sendError(response, 412, "invalid data format");
         } catch (IOException e) {
-            Errors.sendError(response, 500, "Внутренняя ошибка сервера");
+            Errors.sendError(response, 500, "Internal Server Error");
         }
     }
 }

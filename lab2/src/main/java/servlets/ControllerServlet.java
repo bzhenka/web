@@ -22,10 +22,8 @@ public class ControllerServlet extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try{
             if ((request.getParameter("X") != null) && (request.getParameter("Y") != null) && (request.getParameter("R") != null)){
-                System.out.println(1);
                 request.getRequestDispatcher("/AreaCheck").forward(request, response);
             } else {
-                System.out.println(2);
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
             }
         }catch (IOException | ServletException e) {

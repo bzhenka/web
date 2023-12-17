@@ -11,7 +11,7 @@ public class ResultsList implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private List<Result> results;
+    private final List<Result> results;
 
     public ResultsList() {
         this.results = new ArrayList<>();

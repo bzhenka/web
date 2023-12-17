@@ -2,21 +2,22 @@ package beans;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Result implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-    private Double x;
-    private Double y;
-    private Double r;
+    private BigDecimal x;
+    private BigDecimal y;
+    private BigDecimal r;
     private boolean hit;
     private String time;
     private long duration;
 
     public Result() {}
 
-    public Result(Double x, Double y, Double r, boolean hit, String time, long duration){
+    public Result(BigDecimal x, BigDecimal y, BigDecimal r, boolean hit, String time, long duration){
         this.x = x;
         this.y = y;
         this.r = r;
@@ -24,27 +25,27 @@ public class Result implements Serializable {
         this.time = time;
         this.duration = duration;
     }
-    public Double getX(){
+    public BigDecimal getX(){
         return x;
     }
 
-    public Double getY() {
+    public BigDecimal getY() {
         return y;
     }
 
-    public Double getR() {
+    public BigDecimal getR() {
         return r;
     }
 
-    public void setX(Double x) {
+    public void setX(BigDecimal x) {
         this.x = x;
     }
 
-    public void setY(Double y) {
+    public void setY(BigDecimal y) {
         this.y = y;
     }
 
-    public void setR(Double r) {
+    public void setR(BigDecimal r) {
         this.r = r;
     }
 

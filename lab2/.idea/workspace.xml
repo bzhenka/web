@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab2:war exploded" />
+      <artifact name="lab2:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,12 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="83c0fb92-de93-4244-bf0a-340abeb9c193" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab2.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/beans/Result.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/beans/ResultsList.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
@@ -72,30 +74,40 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bozhenka/IdeaProjects/lab2/src/main/webapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bozhenka/Documents/web/lab2/src/main/java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn war:exploded" />
+    </option>
+  </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 21.0.0.Final">
     <configuration name="JBoss/WildFly 21.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 21.0.0.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="lab2:war exploded">
+        <artifact name="lab2">
           <settings />
         </artifact>
       </deployment>
@@ -159,15 +171,16 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="lab2:war exploded" />
+          <artifact name="lab2" />
         </option>
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="war:exploded" />
       </method>
     </configuration>
-    <configuration name="JBoss/WildFly 30.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 30.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="JBoss/WildFly 30.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 26.1.3.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="lab2:war exploded">
+        <artifact name="lab2">
           <settings />
         </artifact>
       </deployment>
@@ -231,8 +244,19 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="lab2:war exploded" />
+          <artifact name="lab2" />
         </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -250,6 +274,10 @@
       <updated>1699094128269</updated>
       <workItem from="1699094129308" duration="67177000" />
       <workItem from="1699600475896" duration="644000" />
+      <workItem from="1700550767630" duration="7157000" />
+      <workItem from="1700857967415" duration="14274000" />
+      <workItem from="1701689606178" duration="49087000" />
+      <workItem from="1702762944004" duration="3124000" />
     </task>
     <servers />
   </component>

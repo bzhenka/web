@@ -126,8 +126,7 @@ export default class Canvas{
         dumb_y += this.height * 0.1;
         return [dumb_x, dumb_y];
     }
-
-    drawSavedPoints(results) {
-        results.forEach((result) => this.drawResult(result));
+    drawSavedPoints(clickedPoints) {
+        clickedPoints.forEach((result) => this.drawResult(result));
     }
 }
