@@ -10,31 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c0fb92-de93-4244-bf0a-340abeb9c193" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/beans/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/beans/ResultsList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/ControllerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/AreaChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/CoordinatesValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Errors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/canvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Снимок экрана 2023-11-06 в 14.38.50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/utils/AreaChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/utils/ZonedDateTimeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/value/GraphValueBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/value/RValueBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/value/XValueBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/resources/js/canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/resources/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/ResultsControllerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/ResultsControllerBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/XBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/value/YValueBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/entity/ResultEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/entity/ResultEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/resources/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/resources/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/resources/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +43,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -278,6 +270,7 @@
       <workItem from="1700857967415" duration="14274000" />
       <workItem from="1701689606178" duration="49087000" />
       <workItem from="1702762944004" duration="3124000" />
+      <workItem from="1702833400400" duration="11417000" />
     </task>
     <servers />
   </component>

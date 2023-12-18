@@ -12,24 +12,29 @@
 <h:head>
     <title>Web lab 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="css" name="main.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./resources/js/index.js"></script>
 </h:head>
 
 <h:body>
     <h:panelGroup layout="block">
         <h:panelGroup layout="block">
-            <h:outputText value="Andreeva Bozhena" />
-            <h:outputText value="P3231" />
-            <h:outputText value="493939" />
+            <h1>Андреева Божена</h1>
+            <h2>P3231 ВАРИАНТ-4728472</h2>
 
         </h:panelGroup>
-        <h:panelGroup layout="block" >
+        <h:panelGroup layout="block" class="watch">
+            <h:panelGroup layout="block" id="date-time">
                 <h:outputText id="date" value="" escape="false" />,
                 <h:outputText id="time" value="" escape="false" />
+            </h:panelGroup>
         </h:panelGroup>
-        <h:panelGroup layout="block" >
-        <h:link value="Go to main" outcome="goToMain"/>
+        <h:panelGroup layout="block" styleClass="custom-link-container">
+        <h:link value="Go to main" outcome="goToMain" styleClass="custom-link"/>
         </h:panelGroup>
     </h:panelGroup>
+
 </h:body>
 
 </html>

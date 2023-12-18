@@ -5,5 +5,6 @@
              version="3.0">
   <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
       <class>example.entity.ResultEntity</class>
+      <class>example.utils.ZonedDateTimeConverter</class>
   </persistence-unit>
 </persistence>

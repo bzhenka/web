@@ -5,8 +5,23 @@
                                   https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd">
 
     <managed-bean>
-        <managed-bean-name>xBean</managed-bean-name>
-        <managed-bean-class>example.XBean</managed-bean-class>
+        <managed-bean-name>yValueBean</managed-bean-name>
+        <managed-bean-class>example.value.YValueBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>xValueBean</managed-bean-name>
+        <managed-bean-class>example.value.XValueBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>rValueBean</managed-bean-name>
+        <managed-bean-class>example.value.RValueBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>graphValueBean</managed-bean-name>
+        <managed-bean-class>example.value.GraphValueBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
@@ -15,8 +30,8 @@
         <managed-bean-class>example.ResultsControllerBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
         <managed-property>
-            <property-name>XBean</property-name>
-            <value>#{xBean}</value>
+            <property-name>YValueBean</property-name>
+            <value>#{yValueBean}</value>
         </managed-property>
     </managed-bean>
 

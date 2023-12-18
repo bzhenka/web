@@ -1,16 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Web lab 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="css" name="main.css"/>
+    <script type="module" src="./resources/js/main.js"></script>
 </h:head>
 <h:body>
+    <h1>Андреева Божена</h1>
+    <h2>P3231 ВАРИАНТ-4728472</h2>
+    <h:panelGroup layout="block" styleClass="custom-link-container">
+    <h:link value="Go to home" outcome="goToIndex" styleClass="custom-link"/>
+    </h:panelGroup>
+    <table >
+        <tr>
+            <td class="date" id="dateForm">
+                <h:form id="myForm">
+
+                    <p>Введите данные: </p>
+                    <h:panelGroup layout="block">
+                        <h:outputText value="X: " />
+                        <h:selectOneMenu id="inputX" value="#{xValueBean.selectedItem}">
+                            <f:selectItems value="#{xValueBean.availableItems}" />
+                            <f:ajax execute="inputX" render="@form" />
+                        </h:selectOneMenu>
+                        <br/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block">
+                        <h:outputText value="Y: " />
+                        <h:inputText type="text" id="inputY" value="#{yValueBean.y}"  a:placeholder="-3 to 5" required="true"
+                        validatorMessage="Invalid" converterMessage="Введите число (-3 &#8804; y &#8804; 5)" requiredMessage="Заполните поле">
+                            <f:validateDoubleRange minimum="-3" maximum="5"/>
+                            <f:ajax execute="inputY" render="@form yMessage" />
+                        </h:inputText>
+                        <br/>
+                        <h:message id="yMessage" for="inputY" errorStyle="color:#ff5275; display:block"/>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block">
+                        <h:outputText value="R: " />
+                        <h:selectOneMenu id="rSelect" value="#{rValueBean.selectedItem}" onchange="
+                            window.canvas.setRadius(this.value);
+                            window.redrawCanvasAndDrawPoints();">
+                                <f:selectItems value="#{rValueBean.availableItems}" />
+                            <f:ajax execute="rSelect" render="@form" />
+                        </h:selectOneMenu>
+                    </h:panelGroup>
+
+                    <h:commandButton value="Отправить" styleClass="submitButton" type="submit" action="#{resultsControllerBean.addResult(xValueBean.selectedItem, yValueBean.y, rValueBean.selectedItem)}">
+                        <f:ajax execute="@form" render="@form table2"/>
+                    </h:commandButton>
+                    <h:commandButton value="Очистить таблицу" styleClass="submitButton" type="submit" action="#{resultsControllerBean.clearResults()}" immediate="true" onclick="sessionStorage.clear(); window.redrawCanvasAndDrawPoints();">
+                        <f:ajax execute="@form" render="@form table2"/>
+                    </h:commandButton>
+                </h:form>
+            </td>
+            <td class="picture">
+                <h:panelGroup layout="block">
+                <canvas id="canvas"/>
+                </h:panelGroup>
+                <div id="msg" style="font-weight:700;color:#989898"></div>
+            </td>
+        </tr>
+    </table>
+
+    <h:dataTable id="table2" var="result" value="#{resultsControllerBean.getSessionResults()}">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="X"/>
+            </f:facet>
+            <h:outputText value="#{result.x}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Y"/>
+            </f:facet>
+            <h:outputText value="#{result.y}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="R"/>
+            </f:facet>
+            <h:outputText value="#{result.r}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Результат"/>
+            </f:facet>
+            <h:outputText value="#{result.success ? 'Попадание' : 'Промах'}"
+                          styleClass="#{result.success ? 'td-success' : 'td-fail'}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Текущее время"/>
+            </f:facet>
+            <h:outputText value="#{result.watch}">
+                <f:convertDateTime type="zonedDateTime" pattern="dd.MM.yyyy HH:mm"/>
+            </h:outputText>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Время работы"/>
+            </f:facet>
+            <h:outputText value="#{result.duration} ms"/>
+        </h:column>
+    </h:dataTable>
+
+
+    <h:form id="graphSelect">
+        <h:inputHidden id="graphX" value="#{graphValueBean.x}" />
+        <h:inputHidden id="graphY" value="#{graphValueBean.y}" />
+        <p:remoteCommand name="updateBeanValues" update="graphX graphY table2"
+                         action="#{resultsControllerBean.addResult(graphValueBean.x, graphValueBean.y, rValueBean.selectedItem)}"/>
+    </h:form>
+
+    <h:form>
+        <p:remoteCommand oncomplete=" window.canvas.setRadius(#{rValueBean.selectedItem}); window.redrawCanvasAndDrawPoints(); " autoRun="true"/>
+    </h:form>
 
 </h:body>
 </html>
